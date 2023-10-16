@@ -1,0 +1,219 @@
+/* flexIconText */
+.FlexIconText_flex{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.FlexIconText_flex p:first-child{
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #601D02;
+}
+
+.FlexIconText_flex p:last-child{
+    font-weight: 400;
+    font-size: .875rem;
+    color: #601D02;
+
+}
+
+/* Header */
+.Header_container{
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.Header_flex{
+    max-width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+    padding: 10px;
+}
+
+.line{
+    height: 20px;
+    width: 1px;
+    background-color: #601D02;
+    margin: 0 30px;
+}
+
+@media (max-width: 840px) { 
+  .Header_container{
+    display: none;
+  }
+ }
+
+ /* Navbar */
+ nav{
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(215, 175, 175, 0.561);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+ }
+
+ .Navbar_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+ }
+
+ .Navbar_logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+ }
+
+ .Navbar_logo p,span{
+  font-weight: 700;
+  font-size: 25px;
+  font-family: 'Great Vibes', cursive;
+ }
+
+ .Navbar_logo span{
+  color: rgb(210, 102, 120);
+ }
+
+ .Navbar_logo img{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+ }
+
+ .Navbar_logo p{
+  color: #551A8B
+ }
+
+ .Navbar_lastlayout{
+  display: flex;
+  gap: 50px;
+ }
+
+ .Navbar_popup_relative{
+  position: relative;
+ }
+
+ .Navbar_popup{
+  min-height: 100px;
+  width: 100px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  border-radius: 6px;
+  transform: translateY(45px);
+
+  /* display: none; */
+  transition: all .3s ease-in-out;
+  opacity: 0;
+ }
+
+ .Navbar_popup_relative:hover > .Navbar_popup{
+  display: block;
+  transform: translateY(0px);
+
+
+  opacity: 1;
+ }
+
+
+
+/* PulseButton */
+.PulseButton {
+    padding: 12px 40px;
+    border-radius: 40px;
+    outline: none;
+    color: white;
+    background-color: #83b2fc;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #83b2fc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    animation: pulse 2s infinite;
+  }
+  
+  .PulseButton:hover {
+    background-color: #4b7bec;
+    transform: scale(1);
+    animation-play-state: paused;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+ /* Swing Button */
+.HangedButton {
+  padding: 6px 20px;
+  border-radius: 4px;
+  outline: none;
+  color: white;
+  background-color: #ff7269;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #ff7269;
+  box-shadow: 0 4px 9px #ff7269;
+  transition: transform 0.3s, background-color 0.3s;
+  animation: swing 2s infinite; /* Apply the swing animation */
+}
+
+.HangedButton:hover {
+  background-color: #f66055;
+  animation-play-state: paused;
+}
+  
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Icon Button */
+.IconButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Adjust the width and height as needed */
+  height: 30px;
+  /* border: 1px solid #ccc; */
+  border-radius: 50%; /* To make it round */
+  cursor: pointer;
+  background-color: #f0f0f0;
+
+  transition: background-color 0.1s ease-in-out;
+}
+
+.IconButton:hover {
+  background-color: #ff7269;
+  color: white;
+}
+
+
+
+  
