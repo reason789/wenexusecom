@@ -94,34 +94,68 @@
   gap: 50px;
  }
 
- .Navbar_popup_relative{
+ 
+
+ .Navbar_popupRelative {
   position: relative;
- }
+}
 
- .Navbar_popup{
-  min-height: 100px;
-  width: 100px;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
+
+.Navbar_popup {
   position: absolute;
-  border-radius: 6px;
-  transform: translateY(45px);
-
-  /* display: none; */
-  transition: all .3s ease-in-out;
+  top: 100%;
+  right: 0;
+  min-width: 160px; 
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   opacity: 0;
- }
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.4s;
+  transform: translateY(10px);
+  z-index: 999
+}
 
- .Navbar_popup_relative:hover > .Navbar_popup{
-  display: block;
-  transform: translateY(0px);
-
-
+.Navbar_popupRelative:hover .Navbar_popup {
   opacity: 1;
- }
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.Navbar_flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.Navbar_googleFlex{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  
+
+  margin-top: 10px;
+  background-color: #edfaf0;
+  padding: 8px 8px;
+  border-radius: 4px;
+  font-family: 'Great Vibes', cursive;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.Navbar_googleFlex:hover {
+  transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+.Navbar_middleLayout{
+  display: flex;
+}
 
 
+/* /////////////////////////////////////////////////////////////////////////////// Button */
 
 /* PulseButton */
 .PulseButton {
@@ -212,6 +246,23 @@
 .IconButton:hover {
   background-color: #ff7269;
   color: white;
+}
+
+/* General Button */
+
+.GeneralButton {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+ 
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  font-family: 'Great Vibes', cursive;
+}
+
+.GeneralButton:hover {
+  transform: scale(1.05); /* Slightly scale up the button on hover */
 }
 
 
